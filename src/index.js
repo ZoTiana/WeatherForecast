@@ -50,7 +50,6 @@ function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
   searchCity(searchInput.value);
-  getForecast(searchInput.value);
 }
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -65,7 +64,7 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
+  /*console.log(response.data);*/
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
